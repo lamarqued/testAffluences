@@ -24,7 +24,8 @@ Once it's done, you can access it on your favorite browser at http://localhost:4
 ## Testing
 
 As mentioned in the exercice, the only available time interval for the reservation will be between 10 (included) and 20 (excluded) on actual date, with id 1337.
-Nonetheless, you can change the "id" property in the file home.component.ts if you want to test the app on other ids, or for further implementation.
+
+Nonetheless, you can change the "id" property in the file ```home.component.ts``` if you want to test the app on other ids, or for further implementation.
 
 ## Built With
 
