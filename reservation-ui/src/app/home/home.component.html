@@ -1,0 +1,19 @@
+<p class="menu-title">Available resource checker</p>
+
+<mat-form-field appearance="fill" class="w-75">
+  <mat-label>Choose a date</mat-label>
+  <input matInput [matDatepicker]="picker" [(ngModel)]="selectedDate" (ngModelChange)="dateChange()">
+  <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+  <mat-datepicker #picker></mat-datepicker>
+</mat-form-field>
+
+<mat-form-field appearance="fill" class="w-75">
+  <mat-label>Choose an hour...</mat-label>
+  <mat-select [(ngModel)]="selectedHour">
+    <mat-option *ngFor="let hour of hours" [value]="hour">
+      {{hour}}
+    </mat-option>
+  </mat-select>
+</mat-form-field>
+
+<button mat-stroked-button (click)='showAvailability()' class="w-50 mw-150p">Check availability</button>

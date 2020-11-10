@@ -1,0 +1,22 @@
+version: '3'
+services:
+  nodejs-server:
+    build:
+      context: ./reservation-api
+      dockerfile: Dockerfile
+    ports:
+      - "80:8080"
+    container_name: node-api
+    volumes:
+       - ./reservation-api:/usr/src/app/reservation-api
+       - /usr/src/app/reservation-api/node_modules
+  angular-ui:
+    build:
+      context: ./reservation-ui
+      dockerfile: Dockerfile
+    ports:
+      - "4200:4200"
+    container_name: angular-ui
+    volumes:
+       - ./reservation-ui:/usr/src/app/reservation-ui
+       - /usr/src/app/reservation-ui/node_modules
